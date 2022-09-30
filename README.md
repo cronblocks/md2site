@@ -1,2 +1,3 @@
 # md2site
-Converting Markdown to HTML using templates
+
+Easily converting Markdown to HTML pages while applying templates and themes.
