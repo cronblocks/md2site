@@ -35,45 +35,20 @@ from os.path    import sep
 class Settings:
     def __init__(self):
         workingDir = getcwd()
-        libsDir = "libs-web"
-        templatesDir = join(libsDir, "templates")
-        outputDir = "Generated-Site"
+
+        templatesDir = join(workingDir, "..", "templates")
+        elementTemplatesDir = join(templatesDir, "element-templates")
+        siteTemplateDir = join(templatesDir, "site-template-001-default")
+
+        outputDir = join(workingDir, "..", "..", "generated-site")
 
         self.scriptName: str = ""
         self.scriptDir: str = workingDir
-        self.scanDir: str = workingDir
+        self.scanDirOrFile: str = workingDir
         self.isRecursive: bool = True
         self.recursionDepth: int = 1000000
-        self.baseUrl: str = "https://ubrant.com"
+        self.baseUrl: str = "file:///" + outputDir
 
-        self.libCssBootstrapFile: str  = join(workingDir, libsDir, "bootstrap.min.css")
-        self.libCssSiteStylesFile: str = join(workingDir, libsDir, "site-styles.css")
-        self.libJsJQueryFile: str      = join(workingDir, libsDir, "jquery.min.js")
-        self.libJsBootstrapFile: str   = join(workingDir, libsDir, "bootstrap.min.js")
-        self.libJsSiteScriptFile: str  = join(workingDir, libsDir, "site-script.js")
-
-        self.outputDir: str = join(workingDir, outputDir)
-
-        self.templateContentHeading1File: str              = join(workingDir, templatesDir, "content-heading1-template.html")
-        self.templateContentHeading2File: str              = join(workingDir, templatesDir, "content-heading2-template.html")
-        self.templateContentHeading3File: str              = join(workingDir, templatesDir, "content-heading3-template.html")
-        self.templateContentHeading4File: str              = join(workingDir, templatesDir, "content-heading4-template.html")
-        self.templateContentHeading5File: str              = join(workingDir, templatesDir, "content-heading5-template.html")
-        self.templateContentHeading6File: str              = join(workingDir, templatesDir, "content-heading6-template.html")
-        self.templateContentImageFile: str                 = join(workingDir, templatesDir, "content-image-template.html")
-        self.templateContentCodeFile: str                  = join(workingDir, templatesDir, "content-code-template.html")
-        self.templateContentConsoleFile: str               = join(workingDir, templatesDir, "content-console-template.html")
-        self.templateContentListUnorderedFile: str         = join(workingDir, templatesDir, "content-list-unordered-template.html")
-        self.templateContentListUnorderedItemFile: str     = join(workingDir, templatesDir, "content-list-unordered-item-template.html")
-        self.templateContentParaFile: str                  = join(workingDir, templatesDir, "content-para-template.html")
-        self.templateContentQuestionFile: str              = join(workingDir, templatesDir, "content-question-template.html")
-        self.templateContentSectionFile: str               = join(workingDir, templatesDir, "content-section-template.html")
-        self.templateSideMajorItemFile: str                = join(workingDir, templatesDir, "side-major-item-template.html")
-        self.templateSideMinorItemFile: str                = join(workingDir, templatesDir, "side-minor-item-template.html")
-        self.templateSideSectionItemFile: str              = join(workingDir, templatesDir, "side-section-item-template.html")
-        self.templateSidePageItemFile: str                 = join(workingDir, templatesDir, "side-page-item-template.html")
-        self.templateSiteFile: str                         = join(workingDir, templatesDir, "site-template.html")
-        
         self.parseArguments()
 
     def parseArguments(self):
