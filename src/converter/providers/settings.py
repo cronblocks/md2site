@@ -55,14 +55,14 @@ class Settings:
         # Script name
         if(argv):
             self.scriptName = argv.pop(0).replace(self.scriptDir, "").replace(sep, "")
-
-        # Scan Directory path
+        
+        # 1 => path-to-scan          => file or directory full-path
         if(argv):
             try:
                 self.scanDir = argv.pop(0)
             except: pass
         
-        # Recursion enabled
+        # 2 => recursion-enabled     => [true] / false
         if(argv):
             value = argv.pop(0).lstrip().rstrip().lower()
 
@@ -71,17 +71,25 @@ class Settings:
             else:
                 self.isRecursive = True
 
-        # Recursion depth
+        # 3 => recursion-depth       => number / [infinite]
         if(argv):
             try:
                 self.recursionDepth = int(argv.pop(0))
             except: pass
         
-        # Output path
+        # 4 => dir-element-templates => - for default
+        if(argv):
+            self.outputDir = argv.pop(0)
+
+        # 5 => dir-site-template     => - for default
+        if(argv):
+            self.outputDir = argv.pop(0)
+
+        # 6 => dir-output            => - for default
         if(argv):
             self.outputDir = argv.pop(0)
         
-        # Base URL
+        # 7 => base-url              => - for local files
         if(argv):
             self.baseUrl = argv.pop(0)
 
