@@ -24,13 +24,13 @@ from os.path    import sep
 
 # ***********
 # Command-line arguments:
-#          1 => path-to-scan       [file or directory full-path]
-#          2 => recursion-enabled  [True / False]
-#          3 => recursion-depth    [number / infinite]
-#          4 => dir-element-templates
-#          5 => dir-site-template
-#          6 => dir-output
-#          7 => base-url
+#          1 => path-to-scan          => file or directory full-path
+#          2 => recursion-enabled     => [true] / false
+#          3 => recursion-depth       => number / [infinite]
+#          4 => dir-element-templates => - for default
+#          5 => dir-site-template     => - for default
+#          6 => dir-output            => - for default
+#          7 => base-url              => - for local files
 # ********
 class Settings:
     def __init__(self):
