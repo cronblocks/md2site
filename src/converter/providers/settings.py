@@ -1,6 +1,6 @@
 # *****************************************************************************************
 # * Purpose:
-# *     Defining defaults and loading settings for the whole application
+# *     Defining defaults and loading settings for other application components
 # *
 # *
 # *****************************************************************************************
