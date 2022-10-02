@@ -24,7 +24,7 @@ from os.path    import sep
 
 # ***********
 # Command-line arguments:
-#          1 => dir-to-scan
+#          1 => path-to-scan       [file or directory full-path]
 #          2 => recursion-enabled  [True / False]
 #          3 => recursion-depth    [number / infinite]
 #          4 => dir-element-templates
