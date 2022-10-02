@@ -52,6 +52,7 @@ class Settings:
         self.parseArguments()
 
     def parseArguments(self):
+
         # Script name
         if(argv):
             self.scriptName = argv.pop(0).replace(self.scriptDir, "").replace(sep, "")
@@ -98,10 +99,11 @@ class Settings:
             argv.pop()
         
 
-    def print(self, headingLine, indent, appendBlankLines = 0):
-        indent2 = indent
-        for i in range (len(indent)):
-            indent2 = " " + indent2
+    def print(self, headingLine: str, indent: str = "  > ", appendBlankLines = 0):
+
+        indentL1 = indent
+        indentL2 = " " * len(indent) * 1 + indentL1
+        indentL3 = " " * len(indent) * 2 + indentL2
         
         recursion = "Disabled"
         if(self.isRecursive):
