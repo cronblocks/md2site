@@ -37,3 +37,4 @@ class Pipeline:
 
     def proceed(self) -> None:
         pass
+    
