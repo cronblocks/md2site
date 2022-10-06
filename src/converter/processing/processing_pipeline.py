@@ -17,6 +17,8 @@
 # *
 # *****************************************************************************************
 
+from datetime import datetime, timedelta
+
 from providers.settings import Settings
 
 
@@ -24,6 +26,8 @@ class Pipeline:
     def __init__(self, settings: Settings) -> None:
         self.settings: Settings = settings
         self.isPipelineSet: bool = False
+        self.processStartTime: datetime = datetime.now()
+        self.processEndTime: datetime = datetime.now()
 
         self.setPipeline()
 
@@ -36,4 +40,8 @@ class Pipeline:
             #####
 
     def proceed(self) -> None:
-        pass
+        self.processStartTime = datetime.now()
+
+        self.processEndTime = datetime.now()
+        dt: timedelta = self.processEndTime - self.processStartTime
+        print(f"Time taken: {dt.total_seconds() * 1000}ms")
