@@ -17,8 +17,17 @@
 # *
 # *****************************************************************************************
 
+from providers.settings import Settings
+
+
 def main():
     print("Hi from md2site")
+    print("")
+    
+    settings: Settings = Settings()
+
+    settings.print()
+
 
 if __name__ == "__main__":
     main()
