@@ -39,9 +39,26 @@ class Pipeline:
             # Pipeline Setup
             #####
 
-    def proceed(self) -> None:
+    def proceed(self, headingLine: str = "Processing:", indent: str = "  > ", appendBlankLines = 0) -> None:
+        indentL1 = indent
+        indentL2 = " " * len(indent) * 1 + indentL1
+        indentL3 = " " * len(indent) * 2 + indentL2
+
+        print(headingLine)
+
+        ##########
+        # Starting
+        #######
         self.processStartTime = datetime.now()
 
+        ##########
+        # Processing
+        #######
+
+        ##########
+        # Ending
+        #######
         self.processEndTime = datetime.now()
+
         dt: timedelta = self.processEndTime - self.processStartTime
-        print(f"Time taken: {dt.total_seconds() * 1000}ms")
+        print(f"{indentL1}Time taken: {dt.total_seconds() * 1000}ms")
