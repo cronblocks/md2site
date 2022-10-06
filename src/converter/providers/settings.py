@@ -39,17 +39,17 @@ class Settings:
         workingDir = getcwd()
 
         templatesDir = join(workingDir, "..", "templates")
-        elementTemplatesDir = join(templatesDir, "element-templates")
-        siteTemplateDir = join(templatesDir, "site-template-001-default")
+        self.elementTemplatesDir = join(templatesDir, "element-templates")
+        self.siteTemplateDir = join(templatesDir, "site-template-001-default")
 
-        outputDir = join(workingDir, "..", "..", "generated-site")
+        self.outputDir = join(workingDir, "..", "..", "generated-site")
 
         self.scriptName: str = ""
         self.scriptDir: str = workingDir
         self.scanDirOrFile: str = workingDir
         self.isRecursive: bool = True
         self.recursionDepth: int = Settings.infinite
-        self.baseUrl: str = "file:///" + outputDir
+        self.baseUrl: str = "file:///" + self.outputDir
 
         self.parseArguments()
 
