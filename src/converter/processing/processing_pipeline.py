@@ -20,6 +20,7 @@
 from datetime import datetime, timedelta
 
 from providers.settings import Settings
+from providers.pathrecursion import getDesiredFiles
 
 
 class Pipeline:
@@ -54,6 +55,8 @@ class Pipeline:
         ##########
         # Processing
         #######
+        for f in getDesiredFiles(self.settings, ""):
+            print(f"{indentL1}{f}")
 
         ##########
         # Ending
