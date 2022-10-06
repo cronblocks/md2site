@@ -25,9 +25,9 @@ from os.path            import join
 from providers.settings import Settings
 
 
-def getDirectories(directory, recursion = False, depth = 0):
+def getDirectories(directory, recursion = False, depth = 0, isFirst = True):
     try:
-        if isdir(directory):
+        if isFirst and isdir(directory):
             yield directory
         
         for name in listdir(directory):
@@ -36,7 +36,7 @@ def getDirectories(directory, recursion = False, depth = 0):
                 yield full_name
 
                 if recursion and depth > 0:
-                    yield from getDirectories(full_name, recursion, depth - 1)
+                    yield from getDirectories(full_name, recursion, depth - 1, False)
     except: pass
 
 def getFiles(directory, extension = ""):
