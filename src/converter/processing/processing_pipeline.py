@@ -17,7 +17,7 @@
 # *
 # *****************************************************************************************
 
-from ..providers.settings import Settings
+from providers.settings import Settings
 
 
 class Pipeline:
@@ -37,4 +37,3 @@ class Pipeline:
 
     def proceed(self) -> None:
         pass
-    
