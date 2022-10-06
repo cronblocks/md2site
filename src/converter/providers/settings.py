@@ -62,7 +62,7 @@ class Settings:
         # 1 => path-to-scan          => file or directory full-path
         if(argv):
             try:
-                self.scanDir = argv.pop(0)
+                self.scanDirOrFile = argv.pop(0)
             except: pass
         
         # 2 => recursion-enabled     => [true] / false
@@ -82,19 +82,31 @@ class Settings:
         
         # 4 => dir-element-templates => - for default
         if(argv):
-            self.outputDir = argv.pop(0)
+            value = argv.pop(0)
+
+            if value != "-":
+                self.elementTemplatesDir = value
 
         # 5 => dir-site-template     => - for default
         if(argv):
-            self.outputDir = argv.pop(0)
+            value = argv.pop(0)
+
+            if value != "-":
+                self.siteTemplateDir = value
 
         # 6 => dir-output            => - for default
         if(argv):
-            self.outputDir = argv.pop(0)
+            value = argv.pop(0)
+
+            if value != "-":
+                self.outputDir = value
         
         # 7 => base-url              => - for local files
         if(argv):
-            self.baseUrl = argv.pop(0)
+            value = argv.pop(0)
+
+            if value != "-":
+                self.baseUrl = value
 
         # Spoiling remaining elements
         while(argv):
