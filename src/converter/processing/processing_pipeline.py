@@ -64,4 +64,4 @@ class Pipeline:
         self.processEndTime = datetime.now()
 
         dt: timedelta = self.processEndTime - self.processStartTime
-        print(f"{indentL1}Time taken: {dt.total_seconds() * 1000}ms")
+        print(f"{indentL2}Time taken: {dt.total_seconds() * 1000}ms")
