@@ -33,6 +33,8 @@ from os.path    import sep
 #     7 => base-url              => - for local files
 # ********
 class Settings:
+    infinite: int = 1000000
+
     def __init__(self):
         workingDir = getcwd()
 
@@ -46,7 +48,7 @@ class Settings:
         self.scriptDir: str = workingDir
         self.scanDirOrFile: str = workingDir
         self.isRecursive: bool = True
-        self.recursionDepth: int = 1000000
+        self.recursionDepth: int = Settings.infinite
         self.baseUrl: str = "file:///" + outputDir
 
         self.parseArguments()
