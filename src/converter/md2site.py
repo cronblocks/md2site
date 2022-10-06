@@ -18,6 +18,7 @@
 # *****************************************************************************************
 
 from providers.settings import Settings
+from processing.processing_pipeline import Pipeline
 
 
 def main():
@@ -25,8 +26,10 @@ def main():
     print("")
     
     settings: Settings = Settings()
+    pipeline: Pipeline = Pipeline(settings)
 
     settings.print()
+    pipeline.proceed()
 
 
 if __name__ == "__main__":
