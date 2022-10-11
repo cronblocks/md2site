@@ -61,5 +61,4 @@ def getDesiredFiles(settings: Settings, extension):
                             settings.isRecursive,
                             settings.recursionDepth):
             for full_filename in getFiles(dir, extension):
-                if isfile(full_filename):
-                    yield full_filename
+                yield full_filename
