@@ -17,10 +17,11 @@
 # *
 # *****************************************************************************************
 
-from datetime import datetime, timedelta
+from datetime                    import datetime, timedelta
+from os.path                     import isfile
 
-from providers.settings import Settings
-from providers.pathrecursion import getDesiredFiles
+from providers.settings          import Settings
+from providers.pathrecursion     import getDesiredFiles
 
 
 class Pipeline:
@@ -56,7 +57,10 @@ class Pipeline:
         # Processing
         #######
         for f in getDesiredFiles(self.settings, ""):
-            print(f"{indentL1}{f}")
+            if isfile(f):
+                print(f"{indentL1}{f}")
+            else:
+                print(f"{indentL1}ERROR: {f}")
 
         ##########
         # Ending
