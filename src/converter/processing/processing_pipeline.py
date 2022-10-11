@@ -57,18 +57,18 @@ class Pipeline:
         ##########
         # Processing
         #######
-        for file in getDesiredFiles(self.settings, ""):
-            if isfile(file):
-                print(f"{indentL1}{file}")
+        for filename in getDesiredFiles(self.settings, ""):
+            if isfile(filename):
+                print(f"{indentL1}{filename}")
 
                 try:
-                    for l, ln in getLines(file):
+                    for l, ln in getLines(filename):
                         pass
                 except:
                     print(f"{indentL2}ERROR: cannot read file")
 
             else:
-                print(f"{indentL1}ERROR: {file}")
+                print(f"{indentL1}ERROR: {filename}")
 
         ##########
         # Ending
