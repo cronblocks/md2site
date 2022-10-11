@@ -17,7 +17,7 @@
 # *
 # *****************************************************************************************
 
-from os.path            import isfile
+from os.path import isfile
 
 
 def getLines(filename: str, filterEmptyLines: bool = False):
