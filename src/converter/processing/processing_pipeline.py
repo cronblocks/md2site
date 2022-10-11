@@ -22,6 +22,7 @@ from os.path                     import isfile
 
 from providers.settings          import Settings
 from providers.pathrecursion     import getDesiredFiles
+from providers.filelines         import getLines
 
 
 class Pipeline:
@@ -59,6 +60,13 @@ class Pipeline:
         for f in getDesiredFiles(self.settings, ""):
             if isfile(f):
                 print(f"{indentL1}{f}")
+
+                try:
+                    for l, ln in getLines(f):
+                        pass
+                except:
+                    print(f"{indentL2}ERROR: cannot read file")
+
             else:
                 print(f"{indentL1}ERROR: {f}")
 
