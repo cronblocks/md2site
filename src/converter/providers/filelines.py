@@ -22,7 +22,9 @@ from os.path import isfile
 
 def getLines(filename: str, filterEmptyLines: bool = False):
     if isfile(filename):
-        lineNumber = 0
+
+        lineNumber: int = 0
+        
         for line in open(filename):
             lineNumber += 1
 
