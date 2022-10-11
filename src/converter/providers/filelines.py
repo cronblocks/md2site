@@ -22,12 +22,12 @@ from os.path import isfile
 
 def getLines(filename: str, filterEmptyLines: bool = False):
     if isfile(filename):
-        ln = 0
-        for l in open(filename):
-            ln += 1
+        lineNumber = 0
+        for line in open(filename):
+            lineNumber += 1
 
             if filterEmptyLines == False:
-                yield (l, ln)
+                yield (line, lineNumber)
             else:
-                if len(l.strip()) > 0:
-                    yield (l, ln)
+                if len(line.strip()) > 0:
+                    yield (line, lineNumber)
