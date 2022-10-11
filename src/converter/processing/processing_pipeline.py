@@ -59,6 +59,7 @@ class Pipeline:
         #######
         for filename in getDesiredFiles(self.settings, ""):
             if isfile(filename):
+                
                 print(f"{indentL1}{filename}")
 
                 try:
