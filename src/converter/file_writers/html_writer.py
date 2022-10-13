@@ -24,4 +24,4 @@ from processing.data              import ProcessedData
 
 class HtmlWriter(BaseWriter):
     def __init__(self, settings: Settings) -> None:
-        pass
+        self.settings: Settings = settings
