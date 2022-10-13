@@ -22,4 +22,4 @@ from providers.settings import Settings
 
 class BaseWriter:
     def __init__(self, settings: Settings) -> None:
-        pass
+        self.settings: Settings = settings
