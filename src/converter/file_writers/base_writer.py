@@ -17,6 +17,9 @@
 # *
 # *****************************************************************************************
 
+from providers.settings import Settings
+
+
 class BaseWriter:
-    def __init__(self) -> None:
+    def __init__(self, settings: Settings) -> None:
         pass
