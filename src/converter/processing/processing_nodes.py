@@ -17,6 +17,21 @@
 # *
 # *****************************************************************************************
 
+from processing.data import ProcessedData
+
+
 class ProcessingNodesPipeline:
     def __init__(self) -> None:
+        pass
+
+    def start(self) -> None:
+        pass
+
+    def end(self) -> None:
+        pass
+
+    def process(self) -> None:
+        pass
+
+    def getData(self) -> ProcessedData:
         pass
