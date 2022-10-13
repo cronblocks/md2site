@@ -17,9 +17,10 @@
 # *
 # *****************************************************************************************
 
-from processing.data  import ProcessedData
+from file_writers.base_writer     import BaseWriter
+from processing.data              import ProcessedData
 
 
-class HtmlWriter:
+class HtmlWriter(BaseWriter):
     def __init__(self, data: ProcessedData) -> None:
         pass
