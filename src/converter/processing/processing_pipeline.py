@@ -23,6 +23,8 @@ from os.path                     import isfile
 from providers.settings          import Settings
 from providers.pathrecursion     import getDesiredFiles
 from providers.filelines         import getLines
+from file_writers.base_writer    import BaseWriter
+from file_writers.html_writer    import HtmlWriter
 
 
 class Pipeline:
