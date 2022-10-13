@@ -25,3 +25,6 @@ from processing.data              import ProcessedData
 class HtmlWriter(BaseWriter):
     def __init__(self, settings: Settings) -> None:
         self.settings: Settings = settings
+    
+    def writeData(self, data: ProcessedData) -> None:
+        pass
