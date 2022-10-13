@@ -33,6 +33,7 @@ class Pipeline:
         self.isPipelineSet: bool = False
         self.processStartTime: datetime = datetime.now()
         self.processEndTime: datetime = datetime.now()
+        self.fileWriter: BaseWriter = HtmlWriter()
 
         self.setPipeline()
 
