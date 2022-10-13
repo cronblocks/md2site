@@ -16,3 +16,10 @@
 # *
 # *
 # *****************************************************************************************
+
+from processing.data  import ProcessedData
+
+
+class HtmlWriter:
+    def __init__(self, data: ProcessedData) -> None:
+        pass
