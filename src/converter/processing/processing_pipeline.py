@@ -35,7 +35,7 @@ class Pipeline:
         self.processStartTime: datetime = datetime.now()
         self.processEndTime: datetime = datetime.now()
         self.processingNodesPipeline: ProcessingNodesPipeline = ProcessingNodesPipeline()
-        self.fileWriter: BaseWriter = HtmlWriter()
+        self.fileWriter: BaseWriter = HtmlWriter(self.settings)
 
         self.setPipeline()
 
