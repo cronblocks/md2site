@@ -24,13 +24,13 @@ class ProcessingNodesPipeline:
     def __init__(self) -> None:
         pass
 
-    def start(self) -> None:
+    def start(self, filename: str) -> None:
         pass
 
     def end(self) -> None:
         pass
 
-    def process(self) -> None:
+    def process(self, lineNumber: int, lineText: str) -> None:
         pass
 
     def getData(self) -> ProcessedData:

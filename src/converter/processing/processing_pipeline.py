@@ -66,12 +66,15 @@ class Pipeline:
             if isfile(filename):
 
                 print(f"{indentL1}{filename}")
+                self.processingNodesPipeline.start(filename)
 
                 try:
                     for l, ln in getLines(filename):
-                        pass
+                        self.processingNodesPipeline.process(ln, l)
                 except:
                     print(f"{indentL2}ERROR: cannot read file")
+
+                self.processingNodesPipeline.end()
 
             else:
                 print(f"{indentL1}ERROR: {filename}")
