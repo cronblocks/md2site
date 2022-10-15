@@ -34,6 +34,8 @@ from os.path    import sep
 # ********
 class Settings:
     infinite: int = 1000000
+    extensionMarkdown: str = ".md"
+    extensionHtml: str = ".html"
 
     def __init__(self):
         workingDir = getcwd()
