@@ -62,7 +62,7 @@ class Pipeline:
         ##########
         # Processing
         #######
-        for filename in getDesiredFiles(self.settings, ".md"):
+        for filename in getDesiredFiles(self.settings, Settings.extensionMarkdown):
             if isfile(filename):
 
                 print(f"{indentL1}{filename}")
