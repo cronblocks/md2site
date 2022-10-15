@@ -25,5 +25,5 @@ class BaseWriter:
     def __init__(self, settings: Settings) -> None:
         self.settings: Settings = settings
     
-    def writeData(self, data: ProcessedData) -> None:
+    def writeData(self, originalFilename: str, data: ProcessedData) -> None:
         pass
