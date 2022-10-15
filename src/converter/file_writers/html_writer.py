@@ -26,6 +26,6 @@ class HtmlWriter(BaseWriter):
     def __init__(self, settings: Settings) -> None:
         self.settings: Settings = settings
     
-    def writeData(self, originalFilename: str, data: ProcessedData) -> None:
+    def writeData(self, indent: str, originalFilename: str, data: ProcessedData) -> None:
         outputFilename: str = originalFilename.replace(self.settings.scanDirOrFile, self.settings.outputDir)
         print(f">> Outputting to {outputFilename}")
