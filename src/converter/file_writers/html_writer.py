@@ -28,4 +28,4 @@ class HtmlWriter(BaseWriter):
     
     def writeData(self, indent: str, originalFilename: str, data: ProcessedData) -> None:
         outputFilename: str = originalFilename.replace(self.settings.scanDirOrFile, self.settings.outputDir)
-        print(f">> Outputting to {outputFilename}")
+        print(f"{indent}Outputting to {outputFilename}")
