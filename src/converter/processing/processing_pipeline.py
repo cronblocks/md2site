@@ -75,7 +75,7 @@ class Pipeline:
                     print(f"{indentL2}ERROR: cannot read file")
 
                 self.processingNodesPipeline.end()
-                self.fileWriter.writeData(self.processingNodesPipeline.getData())
+                self.fileWriter.writeData(filename, self.processingNodesPipeline.getData())
 
             else:
                 print(f"{indentL1}ERROR: {filename}")
