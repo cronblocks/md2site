@@ -28,5 +28,5 @@ class HtmlWriter(BaseWriter):
     
     def writeData(self, indent: str, originalFilename: str, data: ProcessedData) -> None:
         outputFilename: str = originalFilename.replace(self.settings.scanDirOrFile, self.settings.outputDir)
-        outputFilename: str = originalFilename.replace(".md", ".html")
+        outputFilename: str = originalFilename.replace(Settings.extensionMarkdown, Settings.extensionHtml)
         print(f"{indent}Outputting to {outputFilename}")
