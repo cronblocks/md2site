@@ -22,7 +22,7 @@ from processing.processing_pipeline import Pipeline
 
 
 def main():
-    print("Hi from md2site")
+    print("Hello from md2site")
     print("")
     
     settings: Settings = Settings()
