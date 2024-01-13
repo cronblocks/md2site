@@ -1,14 +1,14 @@
 @echo off
 
-:: *****************************************************************************************
+:: ***********************************************************************************
 :: * Purpose:
-:: *     Running the main application by passing-in command-line arguments
+:: *     Running the main application by passing-in the required
+:: * command-line arguments.
 :: *
-:: *
-:: *****************************************************************************************
+:: ***********************************************************************************
 :: * Author: Usama
 :: *
-:: *****************************************************************************************
+:: ***********************************************************************************
 :: * Changes:
 :: *
 :: * Date         Changed by      Description
@@ -17,7 +17,7 @@
 :: *
 :: *
 :: *
-:: *****************************************************************************************
+:: ***********************************************************************************
 
 TITLE md2site
 
@@ -39,6 +39,13 @@ CD "src\converter"
 ::     5 => dir-site-template     => - for default
 ::     6 => dir-output            => - for default
 ::     7 => base-url              => - for local files
-python "md2site.py"  %docs_in_dir%  %recursion_enabled%  %recursion_depth%  %element_templates_dir%  %site_template_dir%  %site_out_dir%  %site_base_url%
+python "md2site.py"                  ^
+            %docs_in_dir%            ^
+            %recursion_enabled%      ^
+            %recursion_depth%        ^
+            %element_templates_dir%  ^
+            %site_template_dir%      ^
+            %site_out_dir%           ^
+            %site_base_url%
 
 PAUSE
