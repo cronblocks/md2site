@@ -1,6 +1,6 @@
 # md2site
 
-A tool for converting *Markdown* to *HTML* pages while applying templates and themes.
+*md2site* is a simple tool for converting *Markdown*-formatted documents to *HTML* pages while applying easily configurable templates and their attached styles.
 
 
 ## Current Status
